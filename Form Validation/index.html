@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form>
+            <i class="fas fa-paper-plane"></i>
+
+            <div class="input-group">
+                <label>Full Name</label>
+                <input type="text" placeholder="Enter your name" id="contact-name" onkeyup="validateName()">
+                <span id="name-error"></span>
+            </div>
+
+            <div class="input-group">
+                <label>Phone No.</label>
+                <input type="tel" placeholder="0500 000 00 00" id="contact-phone" onkeyup="validatePhone()">
+                <span id="phone-error"></span>
+            </div>
+
+            <div class="input-group">
+                <label>Email Id</label>
+                <input type="email" placeholder="Enter Mail" id="contact-email" onkeyup="validateEmail()">
+                <span id="email-error"></span>
+            </div>
+
+            <div class="input-group">
+                <label>Your Message</label>
+                <textarea rows="5" placeholder="Enter Your Message"  id="contact-message" onkeyup="validateMessage()"></textarea>
+                <span id="message-error"></span>
+            </div>
+
+            <button onclick="return validateForm()">Submit</button>
+            <span id="submit-error"></span>
+
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
